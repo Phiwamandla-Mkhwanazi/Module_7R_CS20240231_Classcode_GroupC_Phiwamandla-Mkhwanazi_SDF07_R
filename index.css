@@ -15,24 +15,24 @@
     
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-accent: green;
     
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
+    --fs-h1: 1.75rem;
+    --fs-h2: 1.50rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
     
-    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    --bs: 0.25em 0.25em 0.75em rgba(15, 187, 15, 0.40),
+          0.125em 0.125em 0.25em rgba(15, 187, 15, 0.25);
 }
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
+    --fs-h1: 1.75rem;
+    --fs-h2: 1.50rem;
+    --fs-h3: 1.25rem;
         --fs-body: 1.125rem;
-    }
+    }    
 }
 
 /* General styles */
@@ -172,7 +172,7 @@ header {
 
 .nav__link {
     color: inherit;
-    font-weight: var(--fw-bold);
+    font-weight: normal;
     font-size: var(--fs-h2);
     text-decoration: none;
 }
@@ -190,10 +190,12 @@ header {
     right: 1em;
     top: 1em;
     z-index: 1000;
+
 }
 
 .nav-open .nav {
     transform: translateX(0);
+    opacity: 0.98;
 }
 
 .nav-open .nav-toggle {
@@ -297,7 +299,7 @@ header {
     background-color: var(--clr-dark);
     background-image: url(img/services-bg.jpg);
     background-size: cover;
-    /* background-blend-mode: multiply; */
+    background-blend-mode: multiply; /*Added the dark effect to the image*/
     color: var(--clr-light);
     text-align: center;
 }
@@ -327,15 +329,22 @@ header {
 }
 
 @media (min-width: 800px) {
-    .services {
+    .services 
+    {
         display: flex;
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
     
-    .service + .service {
+    .service + .service 
+    {
         margin-left: 2em;
+    }
+
+    img 
+    {
+        display: block;
     }
 }
 
@@ -385,18 +394,23 @@ header {
 
 .my-work {
     background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-image: url(img/services-bg.jpg);
+    background-size: cover;
+    background-blend-mode: multiply; /*Added the dark effect to the image*/
     text-align: center;    
+    color: var(--clr-light);
 }
 
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
+
     overflow: hidden;
+    padding: 1em;
 }
 
 .portfolio__img {
@@ -429,7 +443,7 @@ header {
 }
 
 .footer a { 
-    color: inherit;
+    color: var(--clr-accent);
     text-decoration: none;
 }
 
