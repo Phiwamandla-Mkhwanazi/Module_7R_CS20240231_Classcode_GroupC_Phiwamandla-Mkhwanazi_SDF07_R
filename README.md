@@ -2,6 +2,9 @@
 
 ![alt text](portfolio.png)
 
+## Final Piece - Images to be updated
+![alt text](final.png)
+
 ## Steps to Complete
 
 - **Access the Course**: Start by going to [Build your web developer portfolio (scrimba.com)](https://scrimba.com/learn/portfolio) 
